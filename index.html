@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="styles.css">
+      <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <i class="fa-brands fa-instagram fa-lg me-2"></i>
+              <a class="navbar-brand" href="#"><b>Instagram</b></a>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <form class="d-flex">
+                  <button type="button" class="btn btn-success me-2 btn-verde" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Create a new post</button>
+
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="message-text" class="col-form-label"><b>Caption:</b></label>
+                              <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                          </form>
+                          <div class="container">
+                            <div class="row justify-content-start">
+                              <div class="col-1 me-2">
+                                <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-location-dot"></i></button>
+                              </div>
+                              <div class="col-1">
+                                <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-camera"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Publish</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa-solid fa-gear fa-lg" style="color: #ffffff;"></i>  
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <a class="dropdown-item" href="#">Accesibility</a>
+                      <a class="dropdown-item" href="#">Privacy and Data</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item text-danger" href="#">Log out</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <div class="container-fluid my-4">
+            <!-- Botón para alternar la vista -->
+            
+            <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item active" role="presentation">
+                <a href="#pills-grid" data-toggle="pill">
+                  <button id="pills-grid-btn" class="btn"><i class="fa-solid fa-table-cells fa-lg" style="color: #7a7a7a;"></i></button>
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a href="#column" data-toggle="pill">
+                  <button id="pills-column-btn" class="btn"><i class="fa-solid fa-square fa-lg" style="color: #7a7a7a;"></i></button>
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid" tabindex="0">
+                <!-- Galería de imágenes -->
+                  <div class="container-fluid">
+                    <div class="row gx-3">
+                      <div class="col-4 gy-3">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://img.saboresdehoy.com/receta/59/callos-a-la-madrilena.jpg" alt="Imagen 2" class="object-fit-fill">
+                        </div>
+                      </div>
+                      <div class="col-4 gy-3">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://imag.bonviveur.com/paella-de-pollo.jpg" alt="Imagen 2" class="object-fit-fill">
+                        </div>
+                      </div>
+                      <div class="col-4 gy-3">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://e00-xlk-cooking-elmundo.uecdn.es/files/article_main_microformat/uploads/2023/02/28/63fe555318358.jpeg" alt="Imagen 2" class="object-fit-fill">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row gx-3">
+                      <div class="col-4 gy-3">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/EI6QLUULRVGILBADBEK2IO3ECY.jpeg" alt="Imagen 2" class="object-fit-fill">
+                        </div>
+                      </div>
+                      <div class="col-4 gy-3">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://viajes.nationalgeographic.com.es/medio/2024/01/19/pulpo-a-feira_13c4a878_240119103719_1200x800.jpg" alt="Imagen 2" class="object-fit-fill">
+                        </div>
+                      </div>
+                      <div class="col-4 gy-3">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://mojopicon.com.es/img/papas-arrugadas-con-mojo-picon-241.jpg" alt="Imagen 2" class="object-fit-fill">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="tab-pane fade show" id="column" role="tabpanel" aria-labelledby="column" tabindex="1">
+                <div class="container col-6">
+                  <div class="card my-3">
+                    <div class="d-flex justify-content-between px-3 pt-2">
+                      <h5 class="card-title">Callos Madrileños</h5>
+                      <p class="text-secondary"><b>13/5</b></p>
+                    </div>
+                    <img src="https://img.saboresdehoy.com/receta/59/callos-a-la-madrilena.jpg" class="card-img-top" alt="callos">
+                    <div class="card-body">
+                      <p><b>203 Likes</b></p>
+                      <p class="card-text">Los callos a la madrileña son uno de los platos más típicos del invierno madrileño. Se elabora 
+                        principalmente con tripas de vaca que se ofrecen por regla general en las casquerías existentes 
+                        cerca de las carnicerías de la capital madrileña.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card my-3">
+                    <div class="d-flex justify-content-between px-3 pt-2">
+                      <h5 class="card-title">Paella valenciana</h5>
+                      <p class="text-secondary"><b>13/5</b></p>
+                    </div>
+                    <img src="https://imag.bonviveur.com/paella-de-pollo.jpg" class="card-img-top" alt="callos">
+                    <div class="card-body">
+                      <p><b>3593 Likes</b></p>
+                      <p class="card-text">La paella, es una receta de cocina con base de arroz, con origen en la actual Comunidad Valenciana, 
+                        hoy en día muy popular en toda España y servida en restaurantes de todo el mundo.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card my-3">
+                    <div class="d-flex justify-content-between px-3 pt-2">
+                      <h5 class="card-title">Tortilla de patata</h5>
+                      <p class="text-secondary"><b>13/5</b></p>
+                    </div>
+                    <img src="https://e00-xlk-cooking-elmundo.uecdn.es/files/article_main_microformat/uploads/2023/02/28/63fe555318358.jpeg" class="card-img-top" alt="callos">
+                    <div class="card-body">
+                      <p><b>2008973 Likes</b></p>
+                      <p class="card-text">La tortilla de patatas o tortilla española es una tortilla a la que se le agrega patatas 
+                        troceadas. Se trata de uno de los platos más conocidos y emblemáticos de la cocina española, 
+                        siendo un producto muy popular que se puede encontrar en casi cualquier bar o restaurante del país.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card my-3">
+                    <div class="d-flex justify-content-between px-3 pt-2">
+                      <h5 class="card-title">Porra Antequerana</h5>
+                      <p class="text-secondary"><b>13/5</b></p>
+                    </div>
+                    <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/EI6QLUULRVGILBADBEK2IO3ECY.jpeg" class="card-img-top" alt="callos">
+                    <div class="card-body">
+                      <p><b>23212 Likes</b></p>
+                      <p class="card-text">La porra antequerana, también conocida localmente como porra fría o porra crúa, 
+                        es una sopa fría típica de Antequera, ciudad andaluza, y también de Málaga capital, de la provincia de Málaga
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card my-3">
+                    <div class="d-flex justify-content-between px-3 pt-2">
+                      <h5 class="card-title">Pulpo a la gallega</h5>
+                      <p class="text-secondary"><b>13/5</b></p>
+                    </div>
+                    <img src="https://viajes.nationalgeographic.com.es/medio/2024/01/19/pulpo-a-feira_13c4a878_240119103719_1200x800.jpg" class="card-img-top" alt="callos">
+                    <div class="card-body">
+                      <p><b>63345 Likes</b></p>
+                      <p class="card-text">El pulpo a la gallega es un plato tradicional de Galicia y básico en su gastronomía,
+                        aunque su consumo se ha generalizado por toda España. 
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card my-3">
+                    <div class="d-flex justify-content-between px-3 pt-2">
+                      <h5 class="card-title">Papas arrugás</h5>
+                      <p class="text-secondary"><b>13/5</b></p>
+                    </div>
+                    <img src="https://mojopicon.com.es/img/papas-arrugadas-con-mojo-picon-241.jpg" class="card-img-top" alt="callos">
+                    <div class="card-body">
+                      <p><b>209089 Likes</b></p>
+                      <p class="card-text">Se denomina papas arrugadas a un modo de cocinar las papas, característico de las islas Canarias. 
+                        Se usa principalmente un tipo de papa en concreto, la papa bonita, aunque pueden utilizarse otros tipos existentes
+                        en las islas Canarias.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
